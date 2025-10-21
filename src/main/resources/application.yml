@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:streamtrack.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update   # creates tables automatically (for dev)
+    show-sql: true
+  h2:   # still let H2 work in dev if needed
+    console:
+      enabled: true
+server:
+  port: 9090
